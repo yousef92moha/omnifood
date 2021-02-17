@@ -1,0 +1,150 @@
+/*
+Orange Color: #e67e22
+*/
+
+/*-----------------------------------------------*/
+/* BASIC SETUP */
+/*-----------------------------------------------*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    background-color: #fff;
+    color: #555555;
+    font-family: 'Lato', 'Arial' , sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+}
+
+
+/*-----------------------------------------------*/
+/* REUSABLE COMPONENTS */
+/*-----------------------------------------------*/
+
+
+.row{
+    max-width: 1140px;
+    margin: 0 auto;
+}
+
+
+
+/* ------ HEADINGS ------ */
+
+
+h1{
+    margin: 0;
+    margin-bottom: 20px; /* فراغ من تحت عن الازار */
+    color: #fff; /* كتابة فوق الصورة بالابيض */
+    font-size: 240%;
+    font-weight: 300; /* نستخدمه لما نزيد جحم الخط كبير هلبا */
+    text-transform: uppercase; /* حتي يكون جروف كبيرة */
+    letter-spacing: 1px; /* بش ماشكون حروف مضغوطة*/
+    word-spacing: 4px; /* فراغ بين كلمات */
+}
+
+
+
+/*-----------------------------------------------*/
+/* ------ BUTTONS ------ */
+
+
+.btn:link,         /* Link,Visited توضح شكل زر هل يتغير لما نضغط عليه شن يصير */
+.btn:visited{
+    display: inline-block; /* جتي نعمل تغيرات علي لينك ليصبح زر */
+    padding: 10px 30px; /* Top Bottom , Leaft Right */
+    font-weight: 300;
+    text-decoration: none; /* لتخلص من الخط الي تحت اي لينك */
+    border-radius: 200px; /* لجعل شكل الزر مقوس*/
+    transition: background-color 0.2s, border 0.2s, color 0.2s;  /*  تضليل يختفي بشويا مش بسرعة */
+}
+
+
+.btn-full:link,
+.btn-full:visited{
+    background-color: #e67e22; /* لون الزر كامل */
+    border: 1px solid #e67e22; /* حدود زر باللون البرتقالي فقط */
+    color: #fff; /* كتابة داخل الزر باالابيض */
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 1px solid #e67e22; /* حدود زر باللون البرتقالي فقط */
+    color: #e67e22; /* لجعل الكتابة داخل الزر بالبرتقالي*/
+}
+
+.btn:hover,       /* hover,active توضح هوفر لما ماوس يمر علي الزر او لينك , واكتف لما يضغط علي الزر */
+.btn:active{
+    background-color: #cf6d17;  /* لما ماوس يمر علي الزر او لينك */
+}
+
+
+.btn-full:hover,
+.btn-full:active{
+    border: 1px solid #cf6d17; /* حدود زر باللون البرتقالي الغامق فقط */
+}
+
+.btn-ghost:hover,
+.btn-ghost:active{
+    border: 1px solid #e67e22; /* حدود زر باللون البرتقالي فقط */
+    color: #fff; /* لجعل الكتابة داخل الزر بالابيض لما بمر الماوس فوقه*/
+}
+
+
+/*-----------------------------------------------*/
+/* HEADER */
+/*-----------------------------------------------*/
+
+header{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /* وضع الصورة خلفية */  /* linear-gradient جعل صورة مظلمة لتوضح الكتابة */
+    background-size: cover; /* تعديل الصوره في النص */
+    background-position: center;  /* لتعديل الصوره في النص */
+    height: 100vh; /* ينحي الفراغ الابيض من فوق */
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;  /* توسيط كتابة في النص */
+    left: 50%; /* توسيط كتابة في النص */
+    transform: translate(-50% , -50%);  /*  ياخذ نص من height and width توسيط كتابة في النص */
+}
+
+.logo{              /* تعديل لوقو الفركيته وكشيك */
+    height: 100px;  
+    width: auto;
+    float:left;    /* لجعل لوقو في اقصي يسار هده الخاصية */
+    margin-top: 20px;
+}
+
+.main-nav{               /* جعل نافكيشن اقصي يمين */
+    float:right;
+    list-style: none;    /* نجي نقاط الي بجنب نافكيشن */   /* عمل فورمتا نافكيشن تبدا من هنا */
+    margin-top: 55px;    /* فراغ فوق اللوقو ونافكيشن */
+}
+
+.main-nav li {            /*لعمل علي li فقط */
+    display: inline;      /* لتكون في خط واحد جنب بعض */
+    margin: 40px;
+}
+
+.main-nav li a:link,             /*لعمل علي a فقط */ 
+.main-nav li a:visited {   
+    padding: 8px 0;        /*  خط الاصفر تحت اللينك يكون فيه مسافه */
+    color: #fff;  
+    text-decoration: none;                 /* لتخلص من الخط الي تحت اي لينك */
+    text-transform: uppercase;
+    font-size: 90%;                        /* 18/20=0.9 90% */
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.2s;         /*  الخط تحت اللينك يختفي بشويا مش بسرعة */
+}
+
+.main-nav li a:hover,             /* عمل خط برتقالي تحت لينك */ 
+.main-nav li a:active{
+    border-bottom: 2px solid #e67e22;
+    
+}

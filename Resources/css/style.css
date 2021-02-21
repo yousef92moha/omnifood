@@ -30,7 +30,7 @@ html{
 }
 
 section{
-    padding: 80px 0,
+    padding: 80px 0;
 }
 
 .box{
@@ -99,14 +99,15 @@ h2:after {                        /* after خاصية هده نديروها عش
 .box p {
     font-size: 90%;
     line-height: : 145%;
+    padding: 1px;
 }
 
 
 
 /* ------ ICONS ------ */
-/*.icon-big {
+.icon-big {
     font-size: 350%;   /* نكبر الايقونة */
-   /* display: block;    
+    display: inline-block;    
     color: #e67e22;
     margin-bottom: 10px;
 }
@@ -162,7 +163,7 @@ h2:after {                        /* after خاصية هده نديروها عش
 /*-----------------------------------------------*/
 
 header{
-    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg); /* وضع الصورة خلفية */  /* linear-gradient جعل صورة مظلمة لتوضح الكتابة */
+    background-image:linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(img/hero.jpg);  /* وضع الصورة خلفية */  /* lineagradient جعل صورة مظلمة لتوضح الكتابة */ 
     background-size: cover; /* تعديل الصوره في النص */
     background-position: center;  /* لتعديل الصوره في النص */
     height: 100vh; /* ينحي الفراغ الابيض من فوق */
@@ -171,8 +172,8 @@ header{
 .hero-text-box{
     position: absolute;
     width: 1140px;
-    top: 50%;  /* توسيط كتابة في النص */
-    left: 50%; /* توسيط كتابة في النص */
+    top: 50%;           /* توسيط كتابة في النص */
+    left: 50%;          /* توسيط كتابة في النص */
     transform: translate(-50% , -50%);  /*  ياخذ نص من height and width توسيط كتابة في النص */
 }
 
@@ -209,4 +210,57 @@ header{
 .main-nav li a:active{
     border-bottom: 2px solid #e67e22;
     
+}
+
+/*-----------------------------------------------*/
+/* FEATURES */
+/*-----------------------------------------------*/
+.section-featuers .long-copy {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+/*-----------------------------------------------*/
+/* MEALS */
+/*-----------------------------------------------*/
+
+.section-meals {
+    padding: 0;
+}
+
+.meals-showcase {
+    list-style: none;
+    width: 100%;
+    float: left;
+}
+
+.meals-showcase li {
+    display: block;
+    float: left;
+    width: 25%;
+}
+
+.meal-photo {
+    width: 100%;
+    margin: 0;
+    overflow: hidden;            /*  خاصية هده يخلي زايد طالع من الصورة خارج الصفحة مخفي */
+    background-color: #000;      /*  لون خلفية سوده عشان opacity */
+}
+
+.meal-photo img {                /*  نعدل الصوره حجمه وكل شي */
+    opacity: 0.7 ;               /*  يخليها شفافه بيضة الصورة لان خلفية بيضة */
+    width: 100%;
+    height: auto;
+    transform: scale(1.15);      /*  نعطي الصورة حجم كبير خاصية css3 */
+    transition: transform 0.5s , opacity 0.5s;  /*   واوبستي توضح صوره اضاءة نخلي الصوره لما يجي عليها الماوس بطيئة انميشن */
+}
+
+.meal-photo img:hover {
+    opacity: 1;
+    transform: scale(1.03);         /*  نخلي الصوره لما يجي عليها الماوس تصغر خاصية */
 }
